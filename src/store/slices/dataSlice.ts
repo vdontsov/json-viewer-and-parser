@@ -14,7 +14,7 @@ const dataSlice = createSlice({
   initialState,
   reducers: {
     loadData(state: DataState, action: PayloadAction<DataItem[]>) {
-      const uniqueFieldsSet = new Set<string>();
+      const uniqueFieldsSet = new Set<string>([ID_FIELD]);
 
       state.items = action.payload.map((item) => {
         Object.keys(item).forEach((key) => uniqueFieldsSet.add(key));
@@ -24,8 +24,11 @@ const dataSlice = createSlice({
           [ID_FIELD]: item[ID_FIELD] || uuidv4(),
         };
       });
+
       state.filteredItems = [...state.items];
-      state.uniqueFields = Array.from(uniqueFieldsSet);
+      state.uniqueFields = Array.from(uniqueFieldsSet).sort((a, b) =>
+        a.localeCompare(b)
+      );
     },
     updateData(state: DataState, action: PayloadAction<DataItem[]>) {
       state.filteredItems = action.payload;
