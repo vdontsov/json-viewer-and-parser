@@ -10,7 +10,6 @@ This project is a test assignment for a company. It is a high-performance JSON v
 - **Real-Time Filtering and Sorting**: Use intuitive tools to filter and sort JSON data by various fields.
 - **Web Worker Integration**: All heavy operations like sorting and filtering are offloaded to Web Workers, keeping the main thread free for UI rendering and interaction.
 - **Inline Editing**: Edit JSON entries inline with simple input elements, supporting strings, numbers, dates, and booleans.
-- **Responsive Interface**: The application is designed to handle large data sets while maintaining an interactive and fluid user experience.
 
 ## Technologies Used
 
@@ -19,13 +18,6 @@ This project is a test assignment for a company. It is a high-performance JSON v
 - **Redux Toolkit**: Manages state effectively across the application.
 - **Web Workers**: Offloads intensive data operations to keep the main thread responsive.
 - **CSS Modules**: Provides scoped CSS for component-based styling.
-
-## Advantages
-
-- **High Performance**: Operations on large data sets do not block the main JavaScript thread, thanks to Web Workers.
-- **Scalability**: The app can handle JSON files with thousands or millions of entries.
-- **User-Friendly**: Intuitive UI for sorting, filtering, and editing JSON data.
-- **Modular Code**: Easy to maintain and extend with additional features.
 
 ## Installation and Setup
 
